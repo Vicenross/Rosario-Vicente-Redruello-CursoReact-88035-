@@ -1,8 +1,24 @@
+import { useState, useEffect } from "react"
+import { getProductos } from "../../asyncmock"
 
-const ItemListContainer = ({saludo}) => {
+
+
+
+const ItemListContainer = () => {
+
+  const [productos, setProductos] = useState([])
+
+  useEffect(() => {
+    getProductos()
+      .then(respuesta => setProductos(respuesta))
+      .catch(error => console.log(error))
+  }, [])
+
   return (
+    <>
 
-    <div>{saludo}</div>
+    </>
+
   )
 }
 

@@ -1,0 +1,14 @@
+import React from 'react'
+
+const Item = (id, nombre, precio, img) => {
+  return (
+    <div>
+        <img src={img} alt={nombre} />
+        <h3>Nombre: {nombre}</h3>
+        <p>Precio: {precio} </p>
+        <button>Ver más</button>
+    </div>
+  )
+}
+
+export default Item
